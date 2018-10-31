@@ -142,12 +142,6 @@ class FlatFeedInner extends React.Component<PropsInner> {
         <FlatList
           ListHeaderComponent={this.props.children}
           style={styles.container}
-          refreshControl={
-            <RefreshControl
-              refreshing={this.props.refreshing}
-              onRefresh={this.props.refresh}
-            />
-          }
           data={this.props.activityOrder.map((id) =>
             this.props.activities.get(id),
           )}
